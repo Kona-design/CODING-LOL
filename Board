@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>My CSC102 Boards Page </h1>
+    </header>
+    <p>ROBOTICS ENGINEERING DEGREE OBJECTIVES
+        1. Design and complete robotic and embedded systems solutions that address real-world situations and challenges.
+        2. Demonstrate embedded microprocessor system and circuit skills.
+        3. Develop mechanical control systems by implementing transducers, actuators, feedback, vision and sensing systems, and other
+        mechanical systems into robotic platforms.
+        4. Examine and assess a variety of applications within the field of robotics.
+        5. Model, analyze, and design systems or processes that integrate hardware and software to control autonomous mechanical systems.
+        6. Implement artificial intelligence and data systems into robotic platforms. 
+        </p>
+</body>
+</html>
