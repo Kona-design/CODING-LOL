@@ -30,8 +30,8 @@
       <img src="R.png" width="200" id="memeImage">
     </p>
 <!-- the footer section is where we put legal info, maybe a site map -->
-
     <footer>
+     <br> 
       Josiah Thongchai
       <br>
       Universty of Advancing Technology
@@ -39,7 +39,6 @@
       2625 W. Baseline Rd.
       <br>
       Tempe, AZ 85283
-      
     </footer>
     <!-- the closing body tag should be the 2nd to last line of code on each HTML page -->
  </body>
