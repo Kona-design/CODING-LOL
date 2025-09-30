@@ -8,6 +8,10 @@
 <body>
     <header>
         <h1>My CSC102 Boards Page </h1>
+        <a href="index.html">Home</a>
+        <br>
+        <a href="boards.html">boards</a>
+       </nav>
     </header>
     <p>ROBOTICS ENGINEERING DEGREE OBJECTIVES
         1. Design and complete robotic and embedded systems solutions that address real-world situations and challenges.
