@@ -27,7 +27,7 @@
 
 <!-- This is a paragraph tag -->
     <p>
-      <img src="R.png" width="200" id="memeImage">
+      <img src="goku.jpg" width="200" id="memeImage">
     </p>
 <!-- the footer section is where we put legal info, maybe a site map -->
     <footer>
