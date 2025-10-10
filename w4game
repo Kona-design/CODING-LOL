@@ -8,20 +8,20 @@
     <!-- this line imports an external javascrpit file into our html page-->
    <!--<script src="basicsJAVA.html"></script>-->
 
-    <!-- todo: mpve the JavaScript code to external -->
+    <!-- todo: move the JavaScript code to external -->
     <script>
         // fuctions are a nice way to organize our code and make our code reusable
         // use a descriptive fuction name - fuctions do something, so make it verb/action
         // () can hold fuction argument - if you need to pass information to the fuction
-        function playcraps(){
+        function playCraps(){
             // log that the function was called
-            console.log("playcraps() function was called")
+            console.log("playCraps() function was called")
 
             // roll die 1
             let roll1 = rollDice();
 
-            // role die 2
-            let roll2 = roleDice();
+            // roll die 2
+            let roll2 = rollDice();
 
             console.log("roll1=" + roll1);
             console.log("roll1=" + roll2);
@@ -43,7 +43,7 @@
             // roll1 % 2 == 0 - this will be true even if we have an even number
             // we also need to make sure that roll1 and roll2 resulted in the same value
         else if(roll1 % 2 == 0 && roll1 == roll2 ){
-            console.log("you won")
+            console.log("you won");
 
     
 
