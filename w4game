@@ -1,3 +1,31 @@
-function updateText(){
-    document.getElementById("heading").innerHTML = "JavaScript is awesome!": 
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice game</title>
+
+    <!-- this line imports an external javascrpit file into our html page-->
+    <script src="basicsJAVA.html"></script>
+
+    <!-- todo: mpve the JavaScript code to external -->
+    <script>
+        // fuctions are a nice way to organize our code and make our code reusable
+        // use a descriptive fuction name - fuctions do something, so make it verb/action
+        // () can hold fuction argument - if you need to pass information to the fuction
+        function playCrap(){
+            // log that the function was called
+            console.log("playCrap() function was called")
+
+        }
+    </script>
+    </head>
+    <header>
+        <h1>Welcome to my dice game</h1>
+    </header>
+
+    <main>
+        <button onclick="playCraps()">Play craps</button>
+    </main>
+</body>
+</html>
