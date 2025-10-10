@@ -6,17 +6,57 @@
     <title>Dice game</title>
 
     <!-- this line imports an external javascrpit file into our html page-->
-    <script src="basicsJAVA.html"></script>
+   <!--<script src="basicsJAVA.html"></script>-->
 
     <!-- todo: mpve the JavaScript code to external -->
     <script>
         // fuctions are a nice way to organize our code and make our code reusable
         // use a descriptive fuction name - fuctions do something, so make it verb/action
         // () can hold fuction argument - if you need to pass information to the fuction
-        function playCrap(){
+        function playcraps(){
             // log that the function was called
-            console.log("playCrap() function was called")
+            console.log("playcraps() function was called")
 
+            // roll die 1
+            let roll1 = rollDice();
+
+            // role die 2
+            let roll2 = roleDice();
+
+            console.log("roll1=" + roll1);
+            console.log("roll1=" + roll2);
+        }
+            // calculate the rolls
+            let sum = roll1 + roll2
+
+            // see if the user lost - if they rolled sum of 7 or 11
+            // || - means or
+            // && - means and
+            if (sum == 7 || sum == 11){
+            console.log("you lost");
+        }
+            // check if we rolled an even number
+            // modulus - do an division problem and we get a reminder as a result
+            // 2/2 = 1 with no reminder = even number
+            //4/2 = 2 with no reminder = even number
+            //5/2 = 1 with reminder of 1 = odd number
+            // roll1 % 2 == 0 - this will be true even if we have an even number
+            // we also need to make sure that roll1 and roll2 resulted in the same value
+        else if(roll1 % 2 == 0 && roll1 == roll2 ){
+            console.log("you won")
+
+    
+
+            document.getElementById("divsum").textContent = sum;
+
+    }
+        // create a function to generate a random number
+        function rollDice(){
+            // create a variable to hold a random number
+            let die = Math.random() * 6; // i want to replecaite a 6 sided dice
+
+            // round the number and return the value
+            return Math.ceil(die);
         }
     </script>
     </head>
@@ -25,7 +65,8 @@
     </header>
 
     <main>
-        <button onclick="playCraps()">Play craps</button>
+        <button onclick="playCraps()">Play Craps</button>
+        <div id="divsum"></div>
     </main>
 </body>
 </html>
