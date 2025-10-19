@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -84,3 +84,4 @@ that the form will post to - we skip form posting in the class; set the name and
     </main>
 </body>
 </html>
+<img src="R.jpg" width="200" id="memeImage">
