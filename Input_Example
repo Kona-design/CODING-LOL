@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -13,36 +13,72 @@
     </header>
     
     <main>
+        <div id="divMessage">
+            
+        </div>
 <!-- form - post is the best option; use get for testing if needed; action is the name of the page
 that the form will post to - we skip form posting in the class; set the name and id to the same value -->
-        <form method="post" action="#" name="frmInput" id="frmInput">
+        <form method="post" action="#" name="frmInput" id="frmInput" onsubmit="return false;">
             <!-- use the label to explain what type of information you want the user to enter in the related
              text box -->
 
-            <label for="txtFullName">fullname:</label>
+            <label for="txtFirstName">First name:</label>
             <!-- specify type of text when setting up a textbox to reduce issues later -->
-            <input type="text" name="txtFullName" id="txtFullName" placeholder="ex, Jane Smith">
+            <input type="text" name="txtFirstName" id="txtFirstName" placeholder="ex, Jane Smith">
             <br>
 
-            <!-- gather the user's favorite color -->
-             <label for ="textFavVolor">Favorite color:</label>
-             <input type="text" name="txtFavColor"id="textFavVolor" placeholder="example: teal">
+            <!-- gather the user's last name -->
+             <label for ="txtLastName">Last Name:</label>
+             <input type="text" name="txtLastName"id="txtLastName" placeholder="example: teal">
             <br>
 
-              <!-- gather the user's favorite color -->
-               <label for="Birthday">Birthday:</label>
-               <input type="text" name="Birthday" id="Birthday" placeholder="Example, May 21st">
+              <!-- gather the user's zip code -->
+               <label for="zip code">zip code:</label>
+               <input type="text" name="zip code" id="txtZipCode" placeholder="Example, 21653">
               <br>
                <button onclick="validateForm()">Save information </button>
         </form>
 
 
         <script>
+            // this function will validate the user's input
             function validateForm(){
                 let fullname = "";
 
-                let favColor = "";
-                
+                // get the valur the user entered in for their first name
+                // we will remove any spaces at the beginning or end with trim()
+                let firstName = document.getElementById("txtFirstName").value.trim();
+                // get the user's last name
+                let lastName = document.getElementById("txtLastName").value.trim();
+               // get the user's zip code
+               let zipcode = document.getElementById("txtZipCode").value.trim();
+                console.log("firstName=" + firstName);
+                console.log("lastName=" + lastName);
+                console.log("zipcode=" + zipcode);
+
+                // validation - we need to make sure that the first name + " " + last name is less than 20 characters
+                // zip code needs to be exactly 5 digits
+
+                // variable to store the message that we will display to the user
+                let message = "";
+
+                // concatenate (add) first name + " " last
+                fullName = firstName = " " + lastName;
+
+                console.log("firstName=" + firstName);
+
+                // verify the number of characters in the full name variable 
+                if (fullName.length > 20 || fullName.length == 1){
+                    // an invalidd name has been entered
+                    message = "Invalid name, Please try again.";
+                    console.log("invalid name")
+                }
+                else if (zipcode.length != 5){
+                    message = "Invalid zip code, please try again"
+                }
+                else{
+                    message = "Welcome, " + firstName + ". The secret word is validation.";
+                }
             }
         </script>
     </main>
