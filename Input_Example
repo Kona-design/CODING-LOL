@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input example</title>
+    
+    <link rel="stylesheet" href="MAIN.css">
+</head>
+<body>
+    <header>
+        <h1>Input example</h1>
+    </header>
+    
+    <main>
+<!-- form - post is the best option; use get for testing if needed; action is the name of the page
+that the form will post to - we skip form posting in the class; set the name and id to the same value -->
+        <form method="post" action="#" name="frmInput" id="frmInput">
+            <!-- use the label to explain what type of information you want the user to enter in the related
+             text box -->
+
+            <label for="txtFullName">fullname:</label>
+            <!-- specify type of text when setting up a textbox to reduce issues later -->
+            <input type="text" name="txtFullName" id="txtFullName" placeholder="ex, Jane Smith">
+            <br>
+
+            <!-- gather the user's favorite color -->
+             <label for ="textFavVolor">Favorite color:</label>
+             <input type="text" name="txtFavColor"id="textFavVolor" placeholder="example: teal">
+            <br>
+
+              <!-- gather the user's favorite color -->
+               <label for="Birthday">Birthday:</label>
+               <input type="text" name="Birthday" id="Birthday" placeholder="Example, May 21st">
+              <br>
+               <button onclick="validateForm()">Save information </button>
+        </form>
+
+
+        <script>
+            function validateForm(){
+                let fullname = "";
+
+                let favColor = "";
+                
+            }
+        </script>
+    </main>
+</body>
+</html>
