@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <h1 id="heading">Event Handling Basics</h1>
+    
+        <button id="btnClickMe" onclick="changetext()">Click me!</button>
+    </main>
+
+<!-- TODO: move this Javascpript code to an external file when done -->
+    <script>
+       /*
+       *Function name: changetext
+       * parameters: none
+       * 
+       *  Description: some text will change when the button is clicked
+       * 
+       */
+        function changetext(){
+            // change the text on the heading 1 tag
+            document.getElementById("heading").textContent = "Event Handled"
+        }
+       
+
+        // when you want an code to run reapeatedly at a set period of time, you can use
+        //  setinterval; setinterval takes 2 argruments, 
+        // the first argument is the code to run and the 2nd argument is 
+        // how often you want the code to run
+        // the second argument is in miliseconds - 100 miliseconds is 1 second
+        // use function(){} to set an anonymous function - htis function only exists right here
+
+        setinterval(function(){
+            console.log("test");
+        }, 10000); 
+    </script>
+</body>
+</html>
