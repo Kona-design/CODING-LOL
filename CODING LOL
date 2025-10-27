@@ -19,16 +19,68 @@
       <h1>Welcome to my CSC102 page LOL</h1>
       <!-- Create a new nav section to hold the menu -->
        <nav>
-        <a href="index.html">Home</a>
+        <a href="CODING LOL.html">Home</a>
         <br>
-        <a href="boards.html">boards</a>
+        <a href="board.html">boards</a>
        </nav>
     </header>
 
 <!-- This is a paragraph tag -->
+
+<div>
+  <button id="btnStart" onclick="startMove();">Start Move</button>
+      <!-- the stop button should not be clickable when the page loads - 
+       disabled="true" means the button is not clickable -->
+      <button id="btnStop" onclick="stopMove();" disabled="true">stop Move</button>
+</div>
     <p>
-      <img src="goku.jpg" width="200" id="memeImage">
+      <img src="katorot.jpg" width="200" id="memeImage">
     </p>
+
+    <!-- TODO: move this code to the external .js file-->
+    <script>
+      // this variable will keep track of current interval - so we can stop the interval
+      let intervalID = 0;
+
+      // this function will start the image moving around
+      function startMove(){
+        // create a shortcut/nickname to the this image in the html
+        let image = document.getElementById("memeImage");
+
+        // store the cirremt interval id
+        intervalID = setInterval(function(){
+          // the code that runs repeatedly
+          let xCord = getRandNum();
+          let yCord = getRandNum();
+
+          // change the x cord
+          image.style.left = xCord + "px";
+          image.style.top = yCord + "px";
+
+      }, 1000); // this code will run every second
+
+        // swap the buttons being enabled
+        document.getElementById("btnStart").disabled = true;
+        document.getElementById("btnStop").disabled = false;
+      }
+      
+      // function to randomly generate a number
+      function stopMove(){
+        // call clear interval and pass in the interval ID
+        clearInterval(intercalID);
+
+        // swap the buttons being enabled
+        document.getElementById("btnStart").disabled = false;// click start
+        document.getElementById("btnstop").disabled = true; // click stop
+      }
+
+      // fumctopm tp reamdp,;u generate a number
+      function getRandNum(){
+        // get a random number between - and 799
+        return Math.floor(Math.random() * 800);
+      }
+    </script>
+
 <!-- the footer section is where we put legal info, maybe a site map -->
     <footer>
      <br> 
