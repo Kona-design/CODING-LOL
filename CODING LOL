@@ -67,11 +67,11 @@
       // function to randomly generate a number
       function stopMove(){
         // call clear interval and pass in the interval ID
-        clearInterval(intercalID);
+        clearInterval(intervalID);
 
         // swap the buttons being enabled
-        document.getElementById("btnStart").disabled = false;// click start
-        document.getElementById("btnstop").disabled = true; // click stop
+        document.getElementById("btnStart").disabled = false;// click start 
+        document.getElementById("btnStop").disabled = true;// click stop
       }
 
       // fumctopm tp reamdp,;u generate a number
