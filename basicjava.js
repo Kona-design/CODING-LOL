@@ -62,12 +62,69 @@
         }
         else if(age == 25){ 
          console.log("age == 25, car renting is now cheaper");
-
+            // the else is a catch-all
         }
         else{
-            console.log("age is 5");
+            console.log("age is not 5");
+        }
+            function addNumbers(num1, num2){
+                return num1 + num2;
+        
+        }
+        for(let i=0; i < 18; i++){
+            console.log("i=" + i.toString());
         }
    
+        // loop - let us run a chunk of code over and over again
+        // nice for working with data, displaying information
+        //for loops - a loop that runs a set number of times
+        // while loops - a loop that runs an undetermined number of times 
+
+        // for loop
+        // the first section of the for lloop is a counter varibale
+        // the second section of the for loop is te condition that has to be true for the loop to run
+        // the third section of the loop is where we change the value of our counter varible (i)
+        // most of the time we ass 1 to the counter using counter ++ which is equal to i = 1 + 1
+        for (let i = 0; i < 5; i++){
+            //wire the code here to have run 5 times
+            console.log("i=" + i);
+        }
+
+        // while loop
+        // generally speaking it is unclear how many times the wild loop will run
+        // works great with user input
+
+        // set up the variable that we want the while loop to text
+        let exit = "no";
+       
+        // test for a condition that once it is no longer true, stop running the loop
+        //while loops may run 0 times if the conftion is not true
+        // while loops generally speaking run a random number of times
+        // while loops can run an infinite number of times(this is bad!!!)
+        while(exit != "yes"){
+            console.log("test my infinite loop");
+
+            // change the conditon that we arae testing to get out of the loop
+            exit = "yes";
+        }
+
+        // do while loop
+        // the loop runs at least 1 time
+        do{
+            // do something here
+            console.log("do while loop");
+        }while(exit !="yes"); // make sure you always place a ; here
+
+        // array syntax
+        
+        let arrfood = ["pizza", "tacos", "burgers", 'hotdogs']
+
+        console.log(arrfood);
+        
+        for (let i = 0; i < arrfood.lenth; i++){
+            // print
+            console.log(arrfood(i));
+        }
    </script>
 </body>
 </html>
