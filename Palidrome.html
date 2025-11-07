@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome tester</title>
+</head>
+<body>
+    <header>
+        <h1>Palindrome</h1>
+    </header>
+    <main>
+        <!-- make it so the form will not submit - since this is a client-side test 
+         -->
+        <form onsubmit="return false;">
+            <label for="txtinput">Word to test</label>
+            <input type="text" id="txtinput" required>
+
+            <button onclick="testPalin();">Test Word</button>
+        </form>
+
+        <div id="divResults"></div>
+    </main>
+
+    <!-- TODO: move to an external jacascript file -->
+     <script>
+        // function to text for the palindrome
+        function testPalin(){
+            // get the value that the user entered in the textbox and remove any spaces at hte beginning or end of the sring
+            let userInput = document.getElementById("txtinput").value.trim();
+
+            console.log("userinput" + userInput);
+
+            // we need to move this into an if/else
+
+            // this statement implies == true, you could write it out
+            // isPalindrome(userinput) == true
+            if (isPalindrome(userInput)){
+                document.getElementById("divResult").textContent = "Yes, " +
+                userInput + " is a palindrome."
+             }
+             else{
+                 document.getElementById("divResult").textContent = "Yes, " +
+                userInput + " is not a palindrome."
+             }
+        }
+
+        //function will test to see if a word is a palindrome
+        function isPalindrome(wordtotest){
+            // remove any spaces insde of the word(s)
+            let cleanWord = wordToTest.replace(/\s/g, "");
+
+           // change any u[[er case letters to lower case]]
+            cleanedWord = cleanedWord.toLowerCase();
+
+            console.log("cleanedword" + cleanedword);
+
+            // convert the cleaned string to an array
+            let arrCleaned = cleanedWord.split();
+
+            // reverse the array content
+            arrCleaned = arrcleaned.reverse();
+
+            // take our reversed array and convert it back to a string
+            let reversedword = arrcleaned.join("");
+
+            console.log("reverseword=" + reversedword);
+
+            // compare if the cleaned and reversed words are the same
+            return cleanedword == reversedword;
+        }
+     </script>
+</body>
+</html>
