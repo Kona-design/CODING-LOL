@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h2>List of plants</h2>
+   <div>
+    <!--ul is the unordered list - items will have a bullet point next to them 
+    ul is good for showing a list of bulleted items -->
+    <ul id="ulPlants">
+
+    </ul>
+ 
+    <h3>Add a plant </h3>
+    <input type="text" id="txtNewPlant">
+    <button onclick="addPlant()";>Add Plant</button>
+   </div>
+
+
+   <script>    
+   
+    
+
+        // a better way to store our planet list would be using a data structure - we will use an array
+    let arrPlants = ["Rose", "Nightshade", "Hydranga", "tree", "flower", "Cactus"]
+
+    // function to add a plant name
+    function addPlant(){
+        // get a new plant name
+        let newPlant = document.getElementById("txtNewPlant").value;
+
+        // add the new plant to the array
+        arrPlants.push(newPlant);
+    }
+// function will loop through the array of plants and show them in the  ul in html code
+function showPlants(){
+    // loop through the pkant array and build an li for each plant
+
+    // shortcut/nickname to the ul in the html
+    let ulPlants = document.getElementById("ulPlants");
+
+    // use a for each loop to run through the list
+    arrPlants.forEach(function(plant, index){
+        // create the list items - li - using javascrpit
+        let li = document.createElement("li")
+        // this will cause our plant name to show on the screen in the ul
+        li.textContent = plant;
+
+        //this will add the new listitems to the existing unordered list
+        ulPlants.appendChild(li);
+    });
+}
+// if we need to store 20 plants, we could set up 20 varibles, but that leads to problem
+    let plant1 = "Rose";
+    let plant2 = "Nightshade";
+    let plant3 = "Hydranga";
+    let plant4 = "tree";
+    let plant5 = "flower";
+    let plant6 = "Cactus";
+    </script>
+</body>
+</html>
