@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>testing</title>
+    <link href="Main.css" rel="stylesheet">
+</head>
+<body>
+    
+</body>
+</html>
+<button id="goku" onclick="buttonClick()">Guess who!</button>
+<button id="newGoku" style="display:none;" onclick="toggleImage()">its me! goku!! </button>
+<img id="katorot" src="katorot.jpg" style="display:none; width:150px;">
+
+<p>What is my favorite childhood anime?</p>
+
+<script>
+    let audio = new Audio('hey-its-me-goku.mp3'); 
+function buttonClick() {
+    document.getElementById("goku").style.display = "none";
+    document.getElementById("newGoku").style.display = "inline-block";
+    document.getElementById("katorot").style.display = "block";
+}
+
+function toggleImage() {
+    let audio = new Audio('hey-its-me-goku.mp3');
+            audio.play();
+    let image = document.getElementById("katorot");
+    if (image.style.display === "none") {
+        image.style.display = "block";
+    } else {
+        image.style.display = "none";
+    }
+}
+
+</script>
