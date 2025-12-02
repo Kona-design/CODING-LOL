@@ -10,27 +10,49 @@
     
 </body>
 </html>
+<!-- First button: when clicked, it reveals the second button and the image of goku -->
 <button id="goku" onclick="buttonClick()">Guess who!</button>
+
+<!-- This button is hidden until the first button is clicked -->
 <button id="newGoku" style="display:none;" onclick="toggleImage()">its me! goku!! </button>
+
+<!-- goku stays hidden and shows after first click -->
 <img id="katorot" src="katorot.jpg" style="display:none; width:150px;">
 
 <p>What is my favorite childhood anime?</p>
 
 <script>
+    
+    // the sound file of goku is added here 
     let audio = new Audio('hey-its-me-goku.mp3'); 
-function buttonClick() {
+
+    // Runs when the first button is clicked
+    function buttonClick() {
+
+          // Hide the first button
     document.getElementById("goku").style.display = "none";
+
+      // Show the second button
     document.getElementById("newGoku").style.display = "inline-block";
+
+     // Show the image
     document.getElementById("katorot").style.display = "block";
 }
-
+ // Runs when the second button is clicked
 function toggleImage() {
+
+     // plays the sound with each click
     let audio = new Audio('hey-its-me-goku.mp3');
             audio.play();
+
+            // Toggle the image visibility
     let image = document.getElementById("katorot");
+
+    // If image is hidden --> show it
     if (image.style.display === "none") {
         image.style.display = "block";
     } else {
+        // If image is visible --> hide it
         image.style.display = "none";
     }
 }
