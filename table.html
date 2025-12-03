@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table</title>
+</head>
+<body>
+    <main>
+        <h1>Programing Mistakes</h1>
+
+        <table>
+            <caption>Programing Mistakes and the costs</caption>
+            <!-- tr is table now - each row should be in a tr -->
+            <!-- <tr>
+                td - table data/cell/column, the actual data goes here
+                <td></td>
+                <td></td>
+            </tr> -->
+            <tr>
+                <th>Project</th>
+                <th>Year</th>
+                <th>Cost</th>
+            </tr>
+        </table>
+    </main>
+
+    ,<script>
+        // function to load the data into the table
+        function loadData(){
+            // array of problems projects - 2d array
+            let arrayProblems = [
+                // first row of data 
+                ["Crowdstrike", 2024, "$5.4B"],
+                ["facebook", 2020, "$90M"],
+                ["citibank", 2020, "900M"],
+                ["Mars Climate Orbiter", 1999, "$327M"]
+            ];
+
+            // nested for loops to display the data 
+            for (let i=0; i<arrayProblems.length; i++){
+                // create hte table row to store the data
+                let tr = document.createElement("tr");
+
+                // loop through each nested array
+                for (let j=0; j < arrayProblems[i].length; j++){
+                    // create the table data to display 1 piece of information
+                    let td = document.createElement("td");
+
+                    // put the data in the td
+                    td.textContent = arrayProblems[i][j];
+
+                    // apend the new data to the existing row
+                    tr.appendChild(td);
+                }
+
+                // add the new row to the exsisting table
+                document.getElementById("tbldata").appendChild(tr);
+            }
+        }
+    </script>
+</body>
+</html>
