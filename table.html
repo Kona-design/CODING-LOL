@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>table</title>
+
+    <link rel="stylesheet" href="Main.css">
+    <style>
+        
+    </style>
 </head>
 <body>
     <main>
@@ -11,21 +16,19 @@
 
         <table>
             <caption>Programing Mistakes and the costs</caption>
-            <!-- tr is table now - each row should be in a tr -->
-            <!-- <tr>
-                td - table data/cell/column, the actual data goes here
-                <td></td>
-                <td></td>
-            </tr> -->
-            <tr>
-                <th>Project</th>
-                <th>Year</th>
-                <th>Cost</th>
-            </tr>
+
+            <tbody id="tblData">
+                <tr>
+                    <th>Project</th>
+                    <th>Year</th>
+                    <th>Cost</th>
+                </tr>
+            </tbody>
         </table>
+
     </main>
 
-    ,<script>
+    <script>
         // function to load the data into the table
         function loadData(){
             // array of problems projects - 2d array
@@ -55,9 +58,12 @@
                 }
 
                 // add the new row to the exsisting table
-                document.getElementById("tbldata").appendChild(tr);
+                document.getElementById("tblData").appendChild(tr);
             }
         }
+
+        // call the function so data loads
+        loadData();
     </script>
 </body>
 </html>
