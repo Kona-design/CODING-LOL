@@ -21,7 +21,7 @@ header{
 img{
     width: 200px;
     height: 200px;
-    position:absolute;
+    position: absolute;
     left: 25%;
     top: 25%;
 }
@@ -33,3 +33,28 @@ img{
 #memeImage{
     width: 150px;
 }
+/* table styles */
+
+
+        table{
+            max-width: 400px;
+            /* mutiple borders in the same srea will collapse into a single border*\ */
+            border-collapse: collapse;
+        }
+
+        tr, th, td{
+            padding: 10px;
+        }
+
+        tr{
+            border: 2px solid purple;
+        }
+        tr:nth-child(even){
+            background-color: lightgray;
+            color: navy
+        }
+        tr:hover{
+            background-color: violet;
+            color: rgb(0, 0, 0)
+        }
+ 
