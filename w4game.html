@@ -24,10 +24,21 @@
             let roll2 = rollDice();
 
             console.log("roll1=" + roll1);
-            console.log("roll1=" + roll2);
+            console.log("roll2=" + roll2);
         }
             // calculate the rolls
-            let sum = roll1 + roll2
+            let sum = (roll1 + roll2);
+
+            //display roll 1 in the roll 2 div
+            document.getElementById("divRoll1").textContent = "Roll 1: " + Roll1;
+
+             document.getElementById("divRoll2").textContent = "Roll 2: " + Roll2;
+
+            //display sum in the sum div
+            document.getElementid("divSum").textContent = "Sum: " + sum;
+            
+            //let player see result
+            let result = "";
 
             // see if the user lost - if they rolled sum of 7 or 11
             // || - means or
@@ -62,9 +73,6 @@
     </head>
     <header>
         <h1>Welcome to my dice game</h1>
-
-        <a href="CODING LOL.html">Home</a>
-        
     </header>
 
     <main>
@@ -73,3 +81,5 @@
     </main>
 </body>
 </html>
+<link href="Main.css" rel="stylesheet">
+<a href="CODING LOL.html">Home</a>
